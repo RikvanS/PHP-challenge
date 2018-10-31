@@ -7,18 +7,19 @@ $array = array(
     "Carolus" => "45",
     "Evert-jan" => "50",
     "Gino" => "32",
-    "Willy" => "41",
-    "Hendrik" => "89"
+    "Willy" => "41"
     );
+
+   
+    
     
     function agecalc($array) {
         $avg = array_sum($array) / count($array);
-        $dinges = array_keys($array);
-        $lastone = end($dinges);
-        array_pop($array);
-        echo "<br>De gemiddelde leeftijd van ". implode(", ",array_keys($array)). " en " . $lastone . " is " .$avg;
+        $last = array_pop($array);
+        echo "<br>De gemiddelde leeftijd van ". implode(", ",array_keys($array)). " & " .$last. " is " .$avg;
     }
     
     agecalc($array);
     
+
 ?>
